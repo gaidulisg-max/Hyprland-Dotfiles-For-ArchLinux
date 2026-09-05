@@ -1,17 +1,16 @@
-[README(2).md](https://github.com/user-attachments/files/31860969/README.2.md)
-# Minimal Hyprland Dotfiles
+[README(3).md](https://github.com/user-attachments/files/31861033/README.3.md)
+# Hyprland Dotfiles for Arch Linux
 
 A clean, declarative Hyprland setup for Arch Linux. Catppuccin Mocha palette,
 rounded corners, soft blur, subtle animations — nothing flashy, just legible
 and consistent.
 
-> Replace `YOUR_USERNAME` below with your actual GitHub username once
-> you've pushed the repo.
+Repo: https://github.com/gaidulisg-max/Hyprland-Dotfiles-For-ArchLinux
 
 ## Install
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/hyprland-dotfiles.git ~/hyprland-dotfiles
+git clone https://github.com/gaidulisg-max/Hyprland-Dotfiles-For-ArchLinux.git ~/hyprland-dotfiles
 cd ~/hyprland-dotfiles
 ./scripts/install.sh
 ```
@@ -73,7 +72,7 @@ values to touch:
 - `waybar/style.css` → bar colors and module pill backgrounds
 - `wofi/style.css`, `kitty/kitty.conf`, `mako/config` → matching accents
 
-## Publishing this to your own GitHub
+## Publishing / updating on GitHub
 
 If you're starting from this downloaded folder rather than a repo you
 already have:
@@ -82,19 +81,26 @@ already have:
 cd hyprland-dotfiles
 git init
 git add .
-git commit -m "Initial commit: minimal Hyprland dotfiles"
+git commit -m "Initial commit: Hyprland dotfiles for Arch Linux"
 git branch -M main
-```
-
-Then create an empty repo on GitHub (github.com/new — don't initialize it
-with a README or .gitignore), and push:
-
-```bash
-git remote add origin https://github.com/YOUR_USERNAME/hyprland-dotfiles.git
+git remote add origin https://github.com/gaidulisg-max/Hyprland-Dotfiles-For-ArchLinux.git
 git push -u origin main
 ```
 
-After that, update the `YOUR_USERNAME` placeholder in this README to match,
-commit, and push again.
+If the repo already exists on GitHub (as it does here), just clone it,
+drop these files in, and push:
+
+```bash
+git clone https://github.com/gaidulisg-max/Hyprland-Dotfiles-For-ArchLinux.git
+cd Hyprland-Dotfiles-For-ArchLinux
+# copy in hypr/, waybar/, wofi/, kitty/, mako/, scripts/, README.md
+git add .
+git commit -m "Add dotfiles"
+git push
+```
+
+Make sure the repo's visibility is set to **Public** under Settings →
+General → Danger Zone if you want others to be able to clone it (or use
+the one-line install command) without being logged in.
 
 Enjoy the setup.
